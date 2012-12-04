@@ -1,6 +1,7 @@
 # -*- encoding: utf-8 -*-
 
-require_relative "lib/spinach-console-reporter/gem_description"
+$:.push File.expand_path("../lib", __FILE__)
+require "spinach-console-reporter/gem_description"
 
 Gem::Specification.new do |gem|
   gem.authors       = ["Yi Wen"]
@@ -16,6 +17,7 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = "0.0.1"
   gem.add_runtime_dependency(%q<spinach>)
+  gem.add_runtime_dependency(%q<rainbow>)
   gem.add_development_dependency(%q<rspec>)
   gem.add_development_dependency(%q<rake>)
   gem.add_development_dependency(%q<guard-spork>)
