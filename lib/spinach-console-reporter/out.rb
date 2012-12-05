@@ -173,7 +173,7 @@ module Spinach
         #
         def output_step(symbol, step, color, step_location = nil)
           step_location = step_location.first.gsub("#{File.expand_path('.')}/", '# ')+":#{step_location.last.to_s}" if step_location
-          max_length = @max_step_name_length + 20 # Colorize and output format correction
+          max_length = @max_step_name_length + 30 # Colorize and output format correction
 
           # REMEMBER TO CORRECT PREVIOUS MAX LENGTH IF OUTPUT FORMAT IS MODIFIED
           buffer = []
