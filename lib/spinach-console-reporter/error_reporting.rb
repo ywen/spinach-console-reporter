@@ -15,11 +15,11 @@ module Spinach
       end
 
       def report_error_steps
-        report_errors('Errors', error_steps, :light_red) if error_steps.any?
+        report_errors('Errors', error_steps, :red) if error_steps.any?
       end
 
       def report_failed_steps
-        report_errors('Failures', failed_steps, :light_red) if failed_steps.any?
+        report_errors('Failures', failed_steps, :red) if failed_steps.any?
       end
 
       def report_undefined_steps
@@ -51,7 +51,7 @@ module Spinach
       #   The color code to use with Colorize to colorize the output.
       #
       def report_errors(banner, steps, color)
-        error.puts "  #{banner} (#{steps.length})".colorize(color)
+        error.puts send(color, "  #{banner} (#{steps.length})")
         steps.each do |error|
           report_error error
         end
@@ -96,9 +96,9 @@ module Spinach
           summary.yellow
         elsif exception.kind_of?(Spinach::StepPendingException)
           summary += "\n      Reason: '#{exception.reason}'\n"
-          summary.yellow
+          yellow(summary)
         else
-          summary.red
+          red(summary)
         end
       end
 
@@ -125,7 +125,7 @@ module Spinach
           end
           output << "\n"
         elsif exception.kind_of?(Spinach::StepPendingException)
-          output << "        Reason: '#{exception.reason}'".yellow
+          output << yellow("        Reason: '#{exception.reason}'")
           output << "\n"
         else
           if options[:backtrace]
