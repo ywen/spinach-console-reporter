@@ -1,3 +1,2 @@
-Dir["#{File.dirname(__FILE__)}/spinach-console-reporter/**/*.rb"].each do |f| 
-  require f
-end
+require_relative "spinach-console-reporter/error_reporting"
+require_relative "spinach-console-reporter/out"

@@ -3,6 +3,7 @@ module Spinach
   module Console
     module Reporter
       class Out < Spinach::Reporter
+        include ErrorReporting
 
         # The output buffers to store the reports.
         attr_reader :out, :error
