@@ -34,7 +34,7 @@ module Spinach
         #
         def before_feature_run(feature)
           name = feature.name
-          out.puts %Q|\n#{'Feature:'.foreground(:magenta)} #{name.foreground(:magenta).bright}|
+          out.puts %Q|\n#{'Feature:'.foreground(:red)} #{name.foreground(:magenta).bright}|
         end
 
         # Prints the scenario name to the standard ouput
@@ -178,7 +178,7 @@ module Spinach
           # REMEMBER TO CORRECT PREVIOUS MAX LENGTH IF OUTPUT FORMAT IS MODIFIED
           buffer = []
           buffer << indent(4)
-          buffer << symbol.foreground(color).bright
+          # buffer << symbol.foreground(color).bright
           buffer << indent(2)
           buffer << step.keyword.foreground(color).bright
           buffer << indent(1)
