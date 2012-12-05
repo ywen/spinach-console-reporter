@@ -35,7 +35,7 @@ module Spinach
         def before_feature_run(feature)
           p "aaaaaaaaaaaaaaaaaaaaa"
           name = feature.name
-          out.puts %Q|\n#{'Feature:'.foreground(:red)} #{name.foreground(:magenta).bright}|
+          out.puts %Q|\n#{'Feature:'.foreground(:red)} #{magenta(name)}|
         end
 
         # Prints the scenario name to the standard ouput
@@ -235,6 +235,14 @@ module Spinach
           buffer << ") ".colorize(color)
           buffer << message.colorize(color)
           buffer.join
+        end
+
+        def magenta(text)
+          color(text, "\e[35m")
+        end
+
+        def color(text, color_code)
+          "#{color_code}#{text}\e[0m"
         end
       end
     end
