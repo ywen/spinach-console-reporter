@@ -1,5 +1,4 @@
 # encoding: utf-8
-require 'rainbow'
 module Spinach
   module Console
     module Reporter
@@ -33,9 +32,8 @@ module Spinach
         #   The feature in a JSON Gherkin format
         #
         def before_feature_run(feature)
-          p "aaaaaaaaaaaaaaaaaaaaa"
           name = feature.name
-          out.puts %Q|\n#{'Feature:'.foreground(:red)} #{magenta(name)}|
+          out.puts %Q|\n#{magenta("Feature:")} #{magenta(name)}|
         end
 
         # Prints the scenario name to the standard ouput
@@ -46,7 +44,7 @@ module Spinach
         def before_scenario_run(scenario, step_definitions = nil)
           @max_step_name_length = scenario.steps.map(&:name).map(&:length).max if scenario.steps.any?
           name = scenario.name
-          out.puts "\n  #{'Scenario:'.foreground(:green)} #{name.foreground(:green).bright}"
+          out.puts "\n  #{green('Scenario:')} #{green(name)}"
         end
 
         # Adds an error report and re
@@ -181,12 +179,12 @@ module Spinach
           buffer << indent(4)
           # buffer << symbol.foreground(color).bright
           buffer << indent(2)
-          buffer << step.keyword.foreground(color).bright
+          buffer << send(color, step.keyword)
           buffer << indent(1)
-          buffer << step.name.foreground(color)
+          buffer << send(color, step.name)
           joined = buffer.join.ljust(max_length)
 
-          out.puts(joined + step_location.to_s.foreground(:white).hide)
+          out.puts(joined + white(step_location.to_s))
         end
 
         # It prints the error summary if the run has failed
@@ -236,13 +234,40 @@ module Spinach
           buffer << message.colorize(color)
           buffer.join
         end
+        def color(text, color_code)
+          "#{color_code}#{text}\e[0m"
+        end
+
+        def bold(text)
+          color(text, "\e[1m")
+        end
+
+        def red(text)
+          color(text, "\e[31m")
+        end
+
+        def green(text)
+          color(text, "\e[32m")
+        end
+
+        def yellow(text)
+          color(text, "\e[33m")
+        end
+
+        def blue(text)
+          color(text, "\e[34m")
+        end
 
         def magenta(text)
           color(text, "\e[35m")
         end
 
-        def color(text, color_code)
-          "#{color_code}#{text}\e[0m"
+        def cyan(text)
+          color(text, "\e[36m")
+        end
+
+        def white(text)
+          color(text, "\e[37m")
         end
       end
     end

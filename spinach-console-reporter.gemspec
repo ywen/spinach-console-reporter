@@ -17,7 +17,6 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = "0.0.1"
   gem.add_runtime_dependency(%q<spinach>)
-  gem.add_runtime_dependency(%q<rainbow>)
   gem.add_development_dependency(%q<rspec>)
   gem.add_development_dependency(%q<rake>)
   gem.add_development_dependency(%q<guard-spork>)
