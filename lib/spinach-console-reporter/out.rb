@@ -33,6 +33,7 @@ module Spinach
         #   The feature in a JSON Gherkin format
         #
         def before_feature_run(feature)
+          p "aaaaaaaaaaaaaaaaaaaaa"
           name = feature.name
           out.puts %Q|\n#{'Feature:'.foreground(:red)} #{name.foreground(:magenta).bright}|
         end
