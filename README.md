@@ -4,7 +4,11 @@ This is a reporter that meant to use on Jenkins, combined with (https://github.c
 
 See the comparison:
 
+### Before
+
 ![before](https://raw.github.com/ywen/spinach-console-reporter/master/images/before.png "Before")
+
+### After
 
 ![after](https://raw.github.com/ywen/spinach-console-reporter/master/images/after.png "After")
 
