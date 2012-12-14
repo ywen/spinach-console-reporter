@@ -1,6 +1,6 @@
 # Spinach::Console::Reporter
 
-This is a reporter that meant to use on Jenkins, combined with (https://github.com/jenkinsci/ansicolor-plugin) to bring the color output to Jenkins console.
+This is a reporter that meant to use on Jenkins, combined with (https://github.com/dblock/jenkins-ansicolor-plugin) to bring the color output to Jenkins console.
 
 See the comparison:
 
