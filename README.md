@@ -1,6 +1,12 @@
 # Spinach::Console::Reporter
 
-TODO: Write a gem description
+This is a reporter that meant to use on Jenkins, combined with (https://github.com/jenkinsci/ansicolor-plugin) to bring the color output to Jenkins console.
+
+See the comparison:
+
+![before](https://github.com/ywen/spinach-console-reporter/images/before.png "Before")
+
+![after](https://github.com/ywen/spinach-console-reporter/images/after.png "After")
 
 ## Installation
 
@@ -18,8 +24,9 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
-
+```bash
+$ bundle exec spinach -r Spinach::Console::Reporter::Out
+```
 ## Contributing
 
 1. Fork it
