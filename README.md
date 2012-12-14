@@ -1,10 +1,10 @@
 # Spinach::Console::Reporter
 
+[![Gem Version](https://fury-badge.herokuapp.com/rb/spinach-console-reporter.png)](http://badge.fury.io/rb/spinach-console-reporter)
+
 This is a reporter that meant to use on Jenkins, combined with (https://github.com/dblock/jenkins-ansicolor-plugin) to bring the color output to Jenkins console.
 
 See the comparison:
-
-[![Gem Version](https://fury-badge.herokuapp.com/rb/spinach-console-reporter.png)](http://badge.fury.io/rb/spinach-console-reporter)
 
 ### Before
 
