@@ -4,6 +4,8 @@ This is a reporter that meant to use on Jenkins, combined with (https://github.c
 
 See the comparison:
 
+[![Gem Version](https://fury-badge.herokuapp.com/rb/spinach-console-reporter.png)](http://badge.fury.io/rb/spinach-console-reporter)
+
 ### Before
 
 ![before](https://raw.github.com/ywen/spinach-console-reporter/master/images/before.png "Before")
