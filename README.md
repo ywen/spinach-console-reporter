@@ -4,9 +4,9 @@ This is a reporter that meant to use on Jenkins, combined with (https://github.c
 
 See the comparison:
 
-![before](https://github.com/ywen/spinach-console-reporter/blob/master/images/before.png "Before")
+![before](https://raw.github.com/ywen/spinach-console-reporter/master/images/before.png "Before")
 
-![after](https://github.com/ywen/spinach-console-reporter/blob/master/images/after.png "After")
+![after](https://raw.github.com/ywen/spinach-console-reporter/master/images/after.png "After")
 
 ## Installation
 
