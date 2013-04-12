@@ -21,4 +21,3 @@ Spork.each_run do
   load "#{File.dirname(__FILE__)}/../lib/spinach-console-reporter.rb"
   Dir["#{File.dirname(__FILE__)}/../lib/spinach-console-reporter/*.rb"].each {|f| load f}
 end
-

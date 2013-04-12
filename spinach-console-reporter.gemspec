@@ -15,7 +15,7 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = "spinach-console-reporter"
   gem.require_paths = ["lib"]
-  gem.version       = "0.0.1"
+  gem.version       = "0.0.2"
   gem.add_runtime_dependency(%q<spinach>)
   gem.add_development_dependency(%q<rspec>)
   gem.add_development_dependency(%q<rake>)
