@@ -1,4 +1,4 @@
-# Spinach::Console::Reporter
+# Spinach::Reporter::Console
 
 [![Gem Version](https://fury-badge.herokuapp.com/rb/spinach-console-reporter.png)](http://badge.fury.io/rb/spinach-console-reporter)
 
@@ -31,7 +31,7 @@ Or install it yourself as:
 ## Usage
 
 ```bash
-$ bundle exec spinach -r Spinach::Console::Reporter::Out
+$ bundle exec spinach -r console
 ```
 ## Contributing
 
